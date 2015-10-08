@@ -8,7 +8,7 @@ def cls():
 cls()
 
 
-data="""\nUsar: verificar.py --url URL --usr USERNAME 
+data="""\nUsar: pruebas_cpanel.py --url URL --usr USERNAME 
 	
    Opciones de Argumentos:
    -h, --help    show this help message and exit
@@ -59,7 +59,8 @@ def verificar_url(x,y):
 					print ("[+]Usuario InCorrecto: {}".format(y))
 				elif real in response_cgi:
 					print ("[+]Usuario Correcto: {}".format(y))
-					print (real)
+					r=response_cgi.split()
+					print(r[4])
 					print ("\n")
 					banner()
 
