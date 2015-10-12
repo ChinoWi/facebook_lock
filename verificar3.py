@@ -5,7 +5,6 @@ import time
 import requests
 import random
 import urllib3
-import requesocks
 
 def logo():
 	banner = """\033[1;35m                          
