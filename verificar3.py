@@ -8,7 +8,7 @@ import urllib3
 import requesocks
 
 def logo():
-	banner = """\033[0;35m                          
+	banner = """\033[1;35m                          
 	    _     	 ____            ___   _  _  
 	   / \    _ __  /  __| ___  ___ /   \ | \/ | 
 	  / _ \  | '_ \ \__ \ / _ \/  _|| | |  \  /  
@@ -334,7 +334,7 @@ if __name__=="__main__":
 	menu()
 	while True:
 	    try:
-	        opcion= input("\033[1;32mMenu Opcion:  \033[0m")
+	        opcion= input("\033[0;32mMenu Opcion:  \033[0m")
 	        opcion = int(opcion)
 	        if opcion==1:
 	        	menu1()
