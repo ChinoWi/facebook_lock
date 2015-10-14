@@ -173,7 +173,7 @@ def menu1():
 		diccionario=input("\n\033[1;32mIngrese Wordlist:  \033[0m")
 		Sistema()
 		cont=0
-		conn=5
+		conn=3
 		cont1=3
 		with open(diccionario,'r') as f:
 					password=f.read().splitlines()
